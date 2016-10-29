@@ -58,7 +58,7 @@ $autoload['packages'] = array();
 |
 |	$autoload['libraries'] = array('user_agent' => 'ua');
 */
-$autoload['libraries'] = array('Globals');
+$autoload['libraries'] = array('parser' , 'session' , 'SpeedFrame' , 'Loader' , 'onlineConfig');
 
 /*
 | -------------------------------------------------------------------
@@ -103,7 +103,7 @@ $autoload['helper'] = array();
 | config files.  Otherwise, leave it blank.
 |
 */
-$autoload['config'] = array();
+$autoload['config'] = array('errorMessage.config' , 'speedframe.config');
 
 /*
 | -------------------------------------------------------------------
