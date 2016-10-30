@@ -47,9 +47,8 @@ class SpeedFrame{
 		$CodeMessageList = self::$CI->config->item(
 			$state ? 'successMessageList' : 'errorCodeMessageList'
 		);
-		if(!$state){
-			header('HTTP/1.1 404 Service Temporarily Unavailable');
-		}
+		if(!$state) header('HTTP/1.1 503 Service Temporarily Unavailable');
+		
 		if( ! isset($CodeMessageList[$messageCode])) $messageCode = 'default';
 		$message = $CodeMessageList[$messageCode];
 		foreach ($other as $key => $value) {
@@ -59,7 +58,8 @@ class SpeedFrame{
 			'state' => $state , 
 			'message' => $message ,
 			'requestTime' => time() , 
-			'result' => $other
+			'result' => $other ,
+			'code' => $messageCode ,
 		)));
 	}
 }

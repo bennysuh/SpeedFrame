@@ -28,10 +28,8 @@ class Loader{
 
 	static public function access($access_list = array() , $type = 'css'){
 		$access_file = implode('?', $access_list);
-
-		return $type == 'css' ? 
+		echo $type == 'css' ? 
 		"<link rel='stylesheet' href='./assets?href={$access_file}'/>" :
 		"<script type='text/javascript' src='./assets?href={$access_file}'></script>" ;
-		
 	}
 }

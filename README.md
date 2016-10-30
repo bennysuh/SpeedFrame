@@ -5,3 +5,5 @@ SpeedFrame 是基于 Codeigniter 的网站快速开发框架，更够有效的�
 http://codeigniter.org.cn/user_guide/
 
 
+## 框架亮点
+- 资源合并请求

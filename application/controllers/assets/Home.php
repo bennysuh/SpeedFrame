@@ -7,7 +7,7 @@ class Home extends CI_Controller{
 
 	public function index(){
 		extract(SpeedFrame::params(array('href') , 'GET'));
-		$allow_file_type = array('css' , 'js' , 'txt' , 'xml');
+		$allow_file_type = array('css' , 'js' , 'txt');
 		foreach (explode('?', $href) as $key => $value){
 
 
@@ -19,7 +19,7 @@ class Home extends CI_Controller{
 			if(in_array(end($file_type), $allow_file_type)){
 				$filename = dirname(APPPATH) . $assets_file_address;
 				if( ! is_file($filename)) SpeedFrame::end(false , '0000005' , $error_assets);
-				echo file_get_contents($filename);
+				echo file_get_contents($filename) . PHP_EOL;
 			}else{
 				SpeedFrame::end(false , '0000004' , $error_assets);
 			}
