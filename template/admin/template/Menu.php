@@ -11,8 +11,12 @@
 </div> 
 <div class="son-menu">
 	<div class="item">
-		<li class="active"><a href="./{admin_template_name}"><span>后台首页</span></a></li>
-		<li><a href="./{admin_template_name}"><span>服务器信息</span></a></li>
-		<li><a href="./{admin_template_name}"><span>网站信息统计</span></a></li>
+		<li class="active"><a href="./{admin_template_name}"><span><i class="fa fa-home"></i> 后台首页</span></a></li>
+
+		<li><a href="./{admin_template_name}"><span><i class="fa fa-list-ul"></i> 信息统计</span></a></li>
+		<li><a href="./{admin_template_name}"><span><i class="fa fa-refresh"></i> 缓存更新</span></a></li>
+		<li><a href="./{admin_template_name}"><span><i class="fa fa-file-text-o"></i> 操作日志</span></a></li>
+		<li><a href="./{admin_template_name}"><span><i class="fa fa-server"></i> 站点管理</span></a></li>
+
 	</div>
 </div>

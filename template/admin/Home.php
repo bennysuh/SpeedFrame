@@ -5,7 +5,11 @@
 <body>
 	<?php $this->load->view('admin/template/Menu.php' , array('active' => 0));?>
 
-
+	<div class="warpper">
+		<div class="box a">
+			3213
+		</div>
+	</div>
 	
 
 
