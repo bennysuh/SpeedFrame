@@ -5,12 +5,10 @@
 <body>
 	<div class="login">
 		<form id="js-admin-login" onsubmit="adminLogin();return false;">
-			<input type="text" id="js-username">
-			<input type="text" id="js-password">
+			<input type="text" id="js-username" value="admin123">
+			<input type="password" id="js-password" value="admin123">
 			<button type="submit">登录</button>
 		</form>
-
-	
 	</div>
 
 

@@ -10,14 +10,19 @@ var doAjax = function(options , isfile){
 		timeOut : 6000 , 
 		content : window,
 		success : function(data){
-			if(data.STATE){
-				options.promise.resolve(data.DATA);
+			if(data.state){
+				options.promise.resolve(data);
 			}else{
-				options.promise.reject(data.ERROR);
+				options.promise.reject(data);
 			}
 		},
 		error : function(data){
-			options.promise.reject("请求出现异常，服务器繁忙或出现问题无法处理您的请求，请稍候再试！");
+			try{
+				var error = JSON.parse(data.responseText);
+				options.promise.reject(error.message);
+			}catch (e){
+				options.promise.reject("请求出现异常，服务器繁忙或出现问题无法处理您的请求，请稍候再试！");
+			}
 		},
 		complete : function(){
 			isRequest = true;

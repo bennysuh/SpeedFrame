@@ -7,7 +7,7 @@ class Home extends CI_Controller{
 
 	public function index(){
 		extract(SpeedFrame::params(array('href') , 'GET'));
-		$allow_file_type = array('css' , 'js' , 'txt');
+		$allow_file_type = array('css' , 'js' , 'txt' , 'woff' , 'woff2' , 'ttf');
 		foreach (explode('?', $href) as $key => $value){
 
 

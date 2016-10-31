@@ -1,0 +1,165 @@
+@import '../function/_animation.less';
+.popup{
+
+	.close{
+		.zoomOut();
+		.animation(zoomOut 0.4s );
+	}
+	.in{
+		.fadeInDown();
+		.animation(fadeInDown 0.5s );
+	}
+	.popup-opacity{
+		display:none;
+		position: absolute;
+		left:0;top:0;
+		width:100%;
+		height:100%;
+		z-index:9999;
+		background-color:rgba(0, 11, 11, 0.6)
+	}
+	.popup-sure{
+		width:800px;
+		background-color:#fff;
+		position: absolute;
+		top:10%;
+		left:0;right:0;
+		margin:0 auto;
+		padding:20px 20px 11px 20px;
+		box-shadow: 0 0 10px -10px #333;
+		border-radius:5px;
+		li{
+			float: left;
+			width:100%;
+			margin:3px 0;
+			position: relative;
+			padding-left: 35px;
+			i{
+				position: absolute;
+				top:0;
+				left:0;
+				color:#999;
+				line-height:42px;
+				margin-left:10px;
+			}
+		}
+		input[type='text'] , input[type='password'] , select{
+			width:96%;
+			color:#555;
+			outline: none;
+			margin:0;
+			padding:0;
+			border:none;
+			border-bottom: 1px solid #f6f6f6;
+			float: left;
+			padding:11px 6px;
+		}
+		.popup-sure-bottom{
+			float: left;
+			margin-top:35px;
+			margin-bottom:5px;
+			width:100%;
+			button{
+				padding:8px 0;
+				font-size:16px;
+			}
+			button.fezocms{
+				width:55%;
+			}
+			button{
+				margin-right:10px;
+				width:39%;
+			}
+		}
+		.popup-sure-content{
+			float: left;
+			width:100%;
+			color:#bbb;
+			padding-top:26px;
+		}
+		.popup-sure-header{
+			float: left;
+			width:100%;
+			.close{
+				line-height: 25px;
+				font-size:20px;
+				margin-top:2px;
+				color:#999;
+				cursor: pointer;
+				margin-right:5px;
+				float: right;
+			}
+			h1{
+				float: left;
+				color:#666;
+				font-size:22px;
+				font-weight:400;
+			}
+		}
+	}
+
+	// 输入框或其他指定元素错误提示框样式
+	.input-toast{
+		display: none;
+		position: absolute;
+		top:0;left:0;
+		z-index:9999;
+		padding:9px 12px;
+		border-radius: 4px;
+		font-size: 12px;
+		color:#eee;
+		cursor: default;
+		background: rgba(255, 58 , 43 , 0.82);
+		.input-toast-up{
+			position: relative;
+			#js-i{
+				position: absolute;
+				top:-17.8px;
+				font-size:20px;
+				color: rgba(255, 58 , 43 , 0.82);
+			}
+		}
+		p i{
+			font-size: 12px;
+			background-color: #fff;
+			border-radius:100%;
+			color: rgba(255, 58 , 43 , 0.82);
+			margin-right:6px;
+			position: relative;
+			top:-1px;
+			padding:0px 1px;
+		}
+	}
+
+
+	.toast{
+		color:#fff;
+		text-align: center;
+		z-index:99999;
+		position: absolute;
+		top:20%;
+		left:0;
+		height:45px;
+		line-height:45px;
+		width:100%;
+		p{
+			font-size:14px;
+			padding:0 30px;
+			border-radius:4px;
+			display:inline-block;
+			background-color:rgba(0, 0, 0, 0.5);
+		}
+	}
+	.toast.open{
+		.bounceInDown();
+		.animation(bounceInDown 0.5s);
+	}
+	.toast.close{
+		.bounceOutUp();
+		.animation(bounceOutUp 1s);
+	}
+	.toast.hide{
+		.fadeOut();
+		.animation(fadeOut 0.4s);
+	}
+}
