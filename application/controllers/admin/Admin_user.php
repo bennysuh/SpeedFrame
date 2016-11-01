@@ -10,4 +10,7 @@ class Admin_user extends admin{
 		
 		Loader::view(array('pages/admin_user/home') , array() , 'admin');
 	}
+	public function group(){
+		Loader::view(array('pages/admin_user/group') , array() , 'admin');
+	}
 }

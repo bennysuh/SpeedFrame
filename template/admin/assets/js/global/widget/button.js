@@ -9,6 +9,7 @@ var buttonWidget = (function(){
 	var public = function(){} , 
 		buttonValue = '';
 	public.prototype.loading = function($this){
+		console.log($this)
 		$this.attr('disabled' , true)
 		.addClass('disabled')
 		.prepend('<i class="fa fa-spinner fa-pulse fa-3x fa-fw" id="js-loading" style="font-size:14px;"></i>')

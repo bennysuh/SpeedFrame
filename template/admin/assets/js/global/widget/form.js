@@ -7,7 +7,7 @@ var formParams = (function(){
 	var params = {target : {}};
 	var formMain = function(targetFrom){
 		
-		$targetFrom = $(targetFrom).find('input , textarea , button');
+		$targetFrom = $(targetFrom).find('input , textarea , button , select ');
 		$targetFrom.each(function(key , value){
 			var $targetFromElement = $(value) , 
 				id = $targetFromElement.attr('id');

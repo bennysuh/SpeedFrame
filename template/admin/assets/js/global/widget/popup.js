@@ -49,7 +49,7 @@ var popupWidget = (function(){
 			$thisToast_.removeClass('open').addClass('close');
 			setTimeout(function(){
 				$thisToast_.removeClass('close').hide();
-			} , 990)		
+			} , 900)		
 		} , 2000)		
 	}
 
@@ -66,7 +66,7 @@ var popupWidget = (function(){
 		$thisSure.find('.popup-sure-content').html(params.content)
 		$thisSure.fadeIn(0).on('click', '#js-close', function(event) {
 			_self.close();
-		}).find('.popup-sure').addClass('in');
+		}).find('.popup-sure').removeClass('close').addClass('in');
 		return this;
 	}
 
@@ -136,11 +136,12 @@ var popupWidget = (function(){
 
 				function startFunctionOne(params , $this){
 					var functionOnc = fun1(params);
+					functionOnc = false;
 					if(functionOnc){
 						_self.close();
 						return false;
 					}
-					if( ! functionOnc || typeof functionOnc == 'undefined') button.reLoading($button);
+					// if( ! functionOnc || typeof functionOnc == 'undefined') button.reLoading($button);
 				}
 
 

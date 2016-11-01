@@ -1,1 +1,3 @@
-.box{float:left}.box.a{background-color:#f2f2f2}
+.warpper {
+  min-width: 1400px;
+}

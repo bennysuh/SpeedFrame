@@ -10,4 +10,6 @@ class Home extends admin{
 		
 		Loader::view(array('home') , array() , 'admin');
 	}
+
+
 }

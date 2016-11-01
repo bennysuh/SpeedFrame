@@ -47,7 +47,7 @@ class SpeedFrame{
 		$CodeMessageList = self::$CI->config->item(
 			$state ? 'successMessageList' : 'errorCodeMessageList'
 		);
-		if(!$state) header('HTTP/1.1 503 Service Temporarily Unavailable');
+		if(!$state) header('HTTP/1.1 503 Service Temporarily Unavailable : ' . $messageCode);
 		
 		if( ! isset($CodeMessageList[$messageCode])) $messageCode = 'default';
 		$message = $CodeMessageList[$messageCode];

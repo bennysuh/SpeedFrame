@@ -28,8 +28,10 @@ class Loader{
 
 	static public function access($access_list = array() , $type = 'css'){
 		$access_file = implode('?', $access_list);
+		$access_key = substr(md5($access_file) , 0 , 10);
+		$_SESSION['access'][$access_key] = $access_file;
 		echo $type == 'css' ? 
-		"<link rel='stylesheet' href='./assets?href={$access_file}'/>" :
-		"<script type='text/javascript' src='./assets?href={$access_file}'></script>" ;
+		"<link rel='stylesheet' href='./assets?href={$access_key}'/>" :
+		"<script type='text/javascript' src='./assets?href={$access_key}'></script>" ;
 	}
 }
