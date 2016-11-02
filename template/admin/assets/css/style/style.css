@@ -169,7 +169,18 @@ body {
 .warpper .tools {
   background-color: #fff;
   padding: 10px;
+  float: left;
+  width: 100%;
   box-shadow: 0 5px 18px 0px #eee;
+}
+.warpper select,
+.warpper option {
+  background-color: #fff;
+  border: 1px solid #eee;
+  cursor: pointer;
+  padding: 5px;
+  outline: none;
+  color: #555;
 }
 .warpper .box {
   float: left;

@@ -75,6 +75,7 @@ class Base_model extends CI_Model {
 	}
 
 	public function get_list($params = array() , $page = 1 , $count = 10 , $select = array() , $is_all  = "Not all"){
+		$page = isset($_GET['page']) ? $this->input->get('page' , true) : $page;
 		if($is_all === "Not all"){
 			$this->db->limit($count , ($page - 1) * $count);
 		}

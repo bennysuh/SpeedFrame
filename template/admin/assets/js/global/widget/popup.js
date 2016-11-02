@@ -95,8 +95,7 @@ var popupWidget = (function(){
 				var button = new buttonWidget();
 				var rule = new ruleWidget();
 				var $button_success = $(this);
-				button.loading($button_success);
-
+				// button.loading($button_success);
 
 				// 处理用户输入规范检测
 				if(isset(public_sure_params.rule)){

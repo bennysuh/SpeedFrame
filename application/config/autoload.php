@@ -103,7 +103,11 @@ $autoload['helper'] = array();
 | config files.  Otherwise, leave it blank.
 |
 */
-$autoload['config'] = array('errorMessage.config' , 'speedframe.config');
+$autoload['config'] = array(
+	'errorMessage.config' , 
+	'speedframe.config' ,
+	'Jurisdiction.config' ,
+);
 
 /*
 | -------------------------------------------------------------------

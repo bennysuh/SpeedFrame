@@ -7,7 +7,7 @@
 		<form id="js-admin-login" onsubmit="adminLogin();return false;">
 			<input type="text" id="js-username" value="admin123">
 			<input type="password" id="js-password" value="admin123">
-			<button type="submit">登录</button>
+			<button type="submit" id="submit">登录</button>
 		</form>
 	</div>
 

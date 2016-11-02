@@ -49,12 +49,15 @@ _api.admin = {
 	}
 }
 _api.admin.admin_user = {
-	login : function(data){return promise(data , _api.admin.apiUrlList.admin_user + "login" )} , 
-	out_login : function(data){return promise(data , _api.admin.apiUrlList.admin_user + "out_login" )} , 
-	create : function(data){return promise(data , _api.admin.apiUrlList.admin_user + "create" )} , 
-	remove : function(data){return promise(data , _api.admin.apiUrlList.admin_user + "remove" )} , 
-	edit : function(data){return promise(data , _api.admin.apiUrlList.admin_user + "edit" )} , 
-
-
+	login : function(data){return promise(data , _api.admin.apiUrlList.admin_user + "User/login" )} , 
+	out_login : function(data){return promise(data , _api.admin.apiUrlList.admin_user + "User/out_login" )} , 
+	create : function(data){return promise(data , _api.admin.apiUrlList.admin_user + "User/create" )} , 
+	remove : function(data){return promise(data , _api.admin.apiUrlList.admin_user + "User/remove" )} , 
+	edit : function(data){return promise(data , _api.admin.apiUrlList.admin_user + "User/edit" )} , 
+}
+_api.admin.admin_user.group = {
+	create : function(data){return promise(data , _api.admin.apiUrlList.admin_user + "group/create" )} , 
+	remove : function(data){return promise(data , _api.admin.apiUrlList.admin_user + "group/remove" )} , 
+	edit : function(data){return promise(data , _api.admin.apiUrlList.admin_user + "group/edit" )} , 
 }
 

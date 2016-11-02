@@ -1,3 +1,6 @@
+
+
+
 .disabled{
 	opacity:0.5!important;
 	cursor: no-drop;
@@ -14,23 +17,24 @@
 	i{
 		margin-right:7px;
 	}
+	&.danger{
+		background-color:#ff5d4c;
+		color:#fff;
+	}
+	&.success{
+		border:1px solid #34bf5e;
+		background-color:#34bf5e;
+		color:#fff;
+	}
+	&.active , &.fezocms{
+		border:1px solid #339BEB;
+		background-color:#339BEB;
+		color:#fff;
+	}
+	&:hover{
+		opacity:0.9;
+	}
 }
 
-.btn.danger{
-	background-color:#ff5d4c;
-	color:#fff;
-}
-.btn.success{
-	border:1px solid #34bf5e;
-	background-color:#34bf5e;
-	color:#fff;
-}
-.btn.active , .btn.fezocms{
-	border:1px solid #339BEB;
-	background-color:#339BEB;
-	color:#fff;
-}
 
-.btn:hover{
-	opacity:0.9;
-}
+

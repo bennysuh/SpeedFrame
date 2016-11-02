@@ -32,14 +32,17 @@ var ruleWidget = (function(){
 		// 	console.warn('Uncaught SyntaxError: Unexpected identifier')
 		// 	return false;
 		// }
+		console.log(data)
 		var index = 0;
 		var params = {};
 		$.each(data , function(key , value){
-			if(typeof value != 'string') return;
+			if(typeof key == 'target') return;
 			params[key] = value;
 			var length = value.length;
 			var thisRule = rule[key];
-			var thisName = toastText.header + thisRule.name
+			var thisName = toastText.header + thisRule.name;
+		console.log(thisName)
+
 
 			if(isset(thisRule.is_null) && thisRule.is_null == true &&  length == 0){
 				_reslutFormat(thisName + toastText.rule.null , thisRule.other)

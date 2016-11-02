@@ -45,20 +45,11 @@
 			</select>
 		</div>
 
-	var admin_group_create = <div class="admin_group_create">
-		<div class="left">
-			<input type="text" placeholder="请输入权限组名称" id="js-username">
-			<input type="text" placeholder="请输入密码" id="js-password">
-			<div class="class">
-				<select id="js-class">
-					<option value="0">超级管理员</option>
-				</select>
-				<button class="btn">创建新的权限组</button>
-			</div>
-			<select id="js-state">
-				<option value="0">正常</option>
-				<option value="-1">封禁</option>
-			</select>
-		</div>
+
+
+
+
+
+
 
 </script>

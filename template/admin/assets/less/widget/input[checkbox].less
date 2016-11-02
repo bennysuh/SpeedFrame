@@ -1,0 +1,47 @@
+.widget-checkbox{
+	float: left;
+	width: 15px;
+	height:15px;
+	cursor: pointer;
+	border:1px solid #ddd;
+	transition: all 0.2s;
+	border-radius: 2px;
+	position: relative;
+	&:hover{
+		border:1px solid #339beb;
+	}
+	&.active:after , &:hover:after{
+		display: inline-block;
+		font: normal normal normal 14px/1 FontAwesome;
+		font-size: inherit;
+		text-rendering: auto;
+		-webkit-font-smoothing: antialiased;
+		color:#339beb;
+		font-size:12px;
+		position: absolute;
+		top:1px;left:0.5px;
+	}
+
+	&.active{
+		border:1px solid #6cbfff;
+	}
+	&.active:after{
+		color:#4ba8f0;
+		content:"\f00c";
+	}
+	&.two{
+		border:1px solid #72c1fd;
+	}
+
+
+	&.two2{
+		border:1px solid #ccc;
+		&.active:after{
+			color:#aaa;
+			content:"\f00c";
+		}
+		&.active{
+			border-color: #ddd;
+		}
+	}
+}
