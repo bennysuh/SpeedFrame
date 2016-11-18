@@ -3,6 +3,7 @@
 	)))?>
 </head>
 <body>
+<img src="http://www.xkzhaoming.com/templets/zhoucheng/images/logo.png" alt="">
 	<div class="login">
 		<form id="js-admin-login" onsubmit="adminLogin();return false;">
 			<input type="text" id="js-username" value="admin123">

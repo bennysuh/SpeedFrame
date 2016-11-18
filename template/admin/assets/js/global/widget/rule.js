@@ -36,12 +36,16 @@ var ruleWidget = (function(){
 		var index = 0;
 		var params = {};
 		$.each(data , function(key , value){
+
 			if(typeof key == 'target') return;
+			console.log(rule)
 			params[key] = value;
 			var length = value.length;
 			var thisRule = rule[key];
+
+			return;
+			if(typeof thisRule.name == 'undefined') return;
 			var thisName = toastText.header + thisRule.name;
-		console.log(thisName)
 
 
 			if(isset(thisRule.is_null) && thisRule.is_null == true &&  length == 0){
